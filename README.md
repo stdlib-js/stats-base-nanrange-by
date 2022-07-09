@@ -61,7 +61,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.nanrangeBy;
+})();
 })();
 </script>
 ```
@@ -221,6 +223,7 @@ var v = nanrangeBy.ndarray( 3, x, 1, x.length-3, accessor );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 function fill() {
     if ( randu() < 0.2 ) {
@@ -239,6 +242,7 @@ console.log( x );
 var v = nanrangeBy( x.length, x, 1, accessor );
 console.log( v );
 
+})();
 })();
 </script>
 </body>
@@ -345,17 +349,17 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/base/dnanrange]: https://github.com/stdlib-js/stats-base-dnanrange/tree/umd
+[@stdlib/stats/base/dnanrange]: https://github.com/stdlib-js/stats-base-dnanrange/tree/umd/tree/umd
 
-[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by/tree/umd
+[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by/tree/umd/tree/umd
 
-[@stdlib/stats/base/nanmin-by]: https://github.com/stdlib-js/stats-base-nanmin-by/tree/umd
+[@stdlib/stats/base/nanmin-by]: https://github.com/stdlib-js/stats-base-nanmin-by/tree/umd/tree/umd
 
-[@stdlib/stats/base/nanrange]: https://github.com/stdlib-js/stats-base-nanrange/tree/umd
+[@stdlib/stats/base/nanrange]: https://github.com/stdlib-js/stats-base-nanrange/tree/umd/tree/umd
 
-[@stdlib/stats/base/range-by]: https://github.com/stdlib-js/stats-base-range-by/tree/umd
+[@stdlib/stats/base/range-by]: https://github.com/stdlib-js/stats-base-range-by/tree/umd/tree/umd
 
-[@stdlib/stats/base/snanrange]: https://github.com/stdlib-js/stats-base-snanrange/tree/umd
+[@stdlib/stats/base/snanrange]: https://github.com/stdlib-js/stats-base-snanrange/tree/umd/tree/umd
 
 <!-- </related-links> -->
 
