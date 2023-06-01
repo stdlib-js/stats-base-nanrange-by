@@ -32,30 +32,14 @@ The [**range**][range] is defined as the difference between the maximum and mini
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-base-nanrange-by
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var nanrangeBy = require( '@stdlib/stats-base-nanrange-by' );
+import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@deno/mod.js';
 ```
 
 #### nanrangeBy( N, x, stride, clbk\[, thisArg] )
@@ -112,7 +96,7 @@ var cnt = context.count;
 The `N` and `stride` parameters determine which elements in `x` are accessed at runtime. For example, to access every other element
 
 ```javascript
-var floor = require( '@stdlib/math-base-special-floor' );
+import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@deno/mod.js';
 
 function accessor( v ) {
     return v * 2.0;
@@ -128,8 +112,8 @@ var v = nanrangeBy( N, x, 2, accessor );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-var floor = require( '@stdlib/math-base-special-floor' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
+import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@deno/mod.js';
 
 function accessor( v ) {
     return v * 2.0;
@@ -204,10 +188,10 @@ var v = nanrangeBy.ndarray( 3, x, 1, x.length-3, accessor );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
-var randu = require( '@stdlib/random-base-randu' );
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var nanrangeBy = require( '@stdlib/stats-base-nanrange-by' );
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
+import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
+import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
+import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@deno/mod.js';
 
 function fill() {
     if ( randu() < 0.2 ) {
@@ -259,7 +243,7 @@ console.log( v );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -327,17 +311,17 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/base/dnanrange]: https://github.com/stdlib-js/stats-base-dnanrange
+[@stdlib/stats/base/dnanrange]: https://github.com/stdlib-js/stats-base-dnanrange/tree/deno
 
-[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by
+[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by/tree/deno
 
-[@stdlib/stats/base/nanmin-by]: https://github.com/stdlib-js/stats-base-nanmin-by
+[@stdlib/stats/base/nanmin-by]: https://github.com/stdlib-js/stats-base-nanmin-by/tree/deno
 
-[@stdlib/stats/base/nanrange]: https://github.com/stdlib-js/stats-base-nanrange
+[@stdlib/stats/base/nanrange]: https://github.com/stdlib-js/stats-base-nanrange/tree/deno
 
-[@stdlib/stats/base/range-by]: https://github.com/stdlib-js/stats-base-range-by
+[@stdlib/stats/base/range-by]: https://github.com/stdlib-js/stats-base-range-by/tree/deno
 
-[@stdlib/stats/base/snanrange]: https://github.com/stdlib-js/stats-base-snanrange
+[@stdlib/stats/base/snanrange]: https://github.com/stdlib-js/stats-base-snanrange/tree/deno
 
 <!-- </related-links> -->
 
