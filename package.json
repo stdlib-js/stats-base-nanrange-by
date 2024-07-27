@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-base-nanrange-by",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Calculate the range of a strided array via a callback function, ignoring NaN values.",
   "license": "Apache-2.0",
   "author": {
@@ -39,7 +39,7 @@
   "dependencies": {
     "@stdlib/math-base-assert-is-nan": "^0.2.1",
     "@stdlib/types": "^0.3.2",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.1"
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/array-filled-by": "^0.2.1",
