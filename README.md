@@ -50,7 +50,7 @@ The [**range**][range] is defined as the difference between the maximum and mini
 ## Usage
 
 ```javascript
-import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@esm/index.mjs';
+import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@v0.2.2-esm/index.mjs';
 ```
 
 #### nanrangeBy( N, x, stride, clbk\[, thisArg] )
@@ -207,7 +207,7 @@ var v = nanrangeBy.ndarray( 3, x, 1, x.length-3, accessor );
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@esm/index.mjs';
+import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@v0.2.2-esm/index.mjs';
 
 function fill() {
     if ( randu() < 0.2 ) {
