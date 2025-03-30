@@ -204,7 +204,7 @@ var v = nanrangeBy.ndarray( 3, x, 1, x.length-3, accessor );
 -   A provided callback function should return a numeric value.
 -   If a provided callback function returns `NaN`, the value is ignored.
 -   If a provided callback function does not return any value (or equivalently, explicitly returns `undefined`), the value is ignored.
--   When possible, prefer using [`dnanrange`][@stdlib/stats/strided/dnanrange], [`snanrange`][@stdlib/stats/base/snanrange], and/or [`nanrange`][@stdlib/stats/base/nanrange], as, depending on the environment, these interfaces are likely to be significantly more performant.
+-   When possible, prefer using [`dnanrange`][@stdlib/stats/strided/dnanrange], [`snanrange`][@stdlib/stats/strided/snanrange], and/or [`nanrange`][@stdlib/stats/base/nanrange], as, depending on the environment, these interfaces are likely to be significantly more performant.
 
 </section>
 
@@ -257,7 +257,7 @@ console.log( v );
 -   <span class="package-name">[`@stdlib/stats-base/nanmin-by`][@stdlib/stats/base/nanmin-by]</span><span class="delimiter">: </span><span class="description">calculate the minimum value of a strided array via a callback function, ignoring NaN values.</span>
 -   <span class="package-name">[`@stdlib/stats-base/nanrange`][@stdlib/stats/base/nanrange]</span><span class="delimiter">: </span><span class="description">calculate the range of a strided array, ignoring NaN values.</span>
 -   <span class="package-name">[`@stdlib/stats-base/range-by`][@stdlib/stats/base/range-by]</span><span class="delimiter">: </span><span class="description">calculate the range of a strided array via a callback function.</span>
--   <span class="package-name">[`@stdlib/stats-base/snanrange`][@stdlib/stats/base/snanrange]</span><span class="delimiter">: </span><span class="description">calculate the range of a single-precision floating-point strided array, ignoring NaN values.</span>
+-   <span class="package-name">[`@stdlib/stats-strided/snanrange`][@stdlib/stats/strided/snanrange]</span><span class="delimiter">: </span><span class="description">calculate the range of a single-precision floating-point strided array, ignoring NaN values.</span>
 
 </section>
 
@@ -353,7 +353,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [@stdlib/stats/base/range-by]: https://github.com/stdlib-js/stats-base-range-by
 
-[@stdlib/stats/base/snanrange]: https://github.com/stdlib-js/stats-base-snanrange
+[@stdlib/stats/strided/snanrange]: https://github.com/stdlib-js/stats-strided-snanrange
 
 <!-- </related-links> -->
 
