@@ -43,14 +43,32 @@ The [**range**][range] is defined as the difference between the maximum and mini
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-nanrange-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@esm/index.mjs';
+var nanrangeBy = require( '@stdlib/stats-base-nanrange-by' );
 ```
 
 #### nanrangeBy( N, x, stride, clbk\[, thisArg] )
@@ -107,7 +125,7 @@ var cnt = context.count;
 The `N` and `stride` parameters determine which elements in `x` are accessed at runtime. For example, to access every other element
 
 ```javascript
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var floor = require( '@stdlib/math-base-special-floor' );
 
 function accessor( v ) {
     return v * 2.0;
@@ -123,8 +141,8 @@ var v = nanrangeBy( N, x, 2, accessor );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var floor = require( '@stdlib/math-base-special-floor' );
 
 function accessor( v ) {
     return v * 2.0;
@@ -186,7 +204,7 @@ var v = nanrangeBy.ndarray( 3, x, 1, x.length-3, accessor );
 -   A provided callback function should return a numeric value.
 -   If a provided callback function returns `NaN`, the value is ignored.
 -   If a provided callback function does not return any value (or equivalently, explicitly returns `undefined`), the value is ignored.
--   When possible, prefer using [`dnanrange`][@stdlib/stats/strided/dnanrange], [`snanrange`][@stdlib/stats/base/snanrange], and/or [`nanrange`][@stdlib/stats/base/nanrange], as, depending on the environment, these interfaces are likely to be significantly more performant.
+-   When possible, prefer using [`dnanrange`][@stdlib/stats/strided/dnanrange], [`snanrange`][@stdlib/stats/strided/snanrange], and/or [`nanrange`][@stdlib/stats/base/nanrange], as, depending on the environment, these interfaces are likely to be significantly more performant.
 
 </section>
 
@@ -198,16 +216,11 @@ var v = nanrangeBy.ndarray( 3, x, 1, x.length-3, accessor );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var randu = require( '@stdlib/random-base-randu' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var nanrangeBy = require( '@stdlib/stats-base-nanrange-by' );
 
 function fill() {
     if ( randu() < 0.2 ) {
@@ -225,10 +238,6 @@ console.log( x );
 
 var v = nanrangeBy( x.length, x, 1, accessor );
 console.log( v );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -248,7 +257,7 @@ console.log( v );
 -   <span class="package-name">[`@stdlib/stats-base/nanmin-by`][@stdlib/stats/base/nanmin-by]</span><span class="delimiter">: </span><span class="description">calculate the minimum value of a strided array via a callback function, ignoring NaN values.</span>
 -   <span class="package-name">[`@stdlib/stats-base/nanrange`][@stdlib/stats/base/nanrange]</span><span class="delimiter">: </span><span class="description">calculate the range of a strided array, ignoring NaN values.</span>
 -   <span class="package-name">[`@stdlib/stats-base/range-by`][@stdlib/stats/base/range-by]</span><span class="delimiter">: </span><span class="description">calculate the range of a strided array via a callback function.</span>
--   <span class="package-name">[`@stdlib/stats-base/snanrange`][@stdlib/stats/base/snanrange]</span><span class="delimiter">: </span><span class="description">calculate the range of a single-precision floating-point strided array, ignoring NaN values.</span>
+-   <span class="package-name">[`@stdlib/stats-strided/snanrange`][@stdlib/stats/strided/snanrange]</span><span class="delimiter">: </span><span class="description">calculate the range of a single-precision floating-point strided array, ignoring NaN values.</span>
 
 </section>
 
@@ -263,7 +272,7 @@ console.log( v );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -334,17 +343,17 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/strided/dnanrange]: https://github.com/stdlib-js/stats-strided-dnanrange/tree/esm
+[@stdlib/stats/strided/dnanrange]: https://github.com/stdlib-js/stats-strided-dnanrange
 
-[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by/tree/esm
+[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by
 
-[@stdlib/stats/base/nanmin-by]: https://github.com/stdlib-js/stats-base-nanmin-by/tree/esm
+[@stdlib/stats/base/nanmin-by]: https://github.com/stdlib-js/stats-base-nanmin-by
 
-[@stdlib/stats/base/nanrange]: https://github.com/stdlib-js/stats-base-nanrange/tree/esm
+[@stdlib/stats/base/nanrange]: https://github.com/stdlib-js/stats-base-nanrange
 
-[@stdlib/stats/base/range-by]: https://github.com/stdlib-js/stats-base-range-by/tree/esm
+[@stdlib/stats/base/range-by]: https://github.com/stdlib-js/stats-base-range-by
 
-[@stdlib/stats/base/snanrange]: https://github.com/stdlib-js/stats-base-snanrange/tree/esm
+[@stdlib/stats/strided/snanrange]: https://github.com/stdlib-js/stats-strided-snanrange
 
 <!-- </related-links> -->
 
