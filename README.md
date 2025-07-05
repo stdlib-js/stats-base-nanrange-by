@@ -43,32 +43,38 @@ The [**range**][range] is defined as the difference between the maximum and mini
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-base-nanrange-by
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var nanrangeBy = require( '@stdlib/stats-base-nanrange-by' );
+nanrangeBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var nanrangeBy = require( 'path/to/vendor/umd/stats-base-nanrange-by/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.nanrangeBy;
+})();
+</script>
 ```
 
 #### nanrangeBy( N, x, strideX, clbk\[, thisArg] )
@@ -212,11 +218,16 @@ var v = nanrangeBy.ndarray( 3, x, 1, x.length-3, accessor );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var uniform = require( '@stdlib/random-base-uniform' );
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var bernoulli = require( '@stdlib/random-base-bernoulli' );
-var nanrangeBy = require( '@stdlib/stats-base-nanrange-by' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanrange-by@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 function rand() {
     if ( bernoulli( 0.8 ) < 0.2 ) {
@@ -234,6 +245,11 @@ console.log( x );
 
 var v = nanrangeBy( x.length, x, 1, accessor );
 console.log( v );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -337,21 +353,21 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor
+[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/stats/strided/dnanrange]: https://github.com/stdlib-js/stats-strided-dnanrange
+[@stdlib/stats/strided/dnanrange]: https://github.com/stdlib-js/stats-strided-dnanrange/tree/umd
 
-[@stdlib/stats/strided/nanmax-by]: https://github.com/stdlib-js/stats-strided-nanmax-by
+[@stdlib/stats/strided/nanmax-by]: https://github.com/stdlib-js/stats-strided-nanmax-by/tree/umd
 
-[@stdlib/stats/strided/nanmin-by]: https://github.com/stdlib-js/stats-strided-nanmin-by
+[@stdlib/stats/strided/nanmin-by]: https://github.com/stdlib-js/stats-strided-nanmin-by/tree/umd
 
-[@stdlib/stats/base/nanrange]: https://github.com/stdlib-js/stats-base-nanrange
+[@stdlib/stats/base/nanrange]: https://github.com/stdlib-js/stats-base-nanrange/tree/umd
 
-[@stdlib/stats/base/range-by]: https://github.com/stdlib-js/stats-base-range-by
+[@stdlib/stats/base/range-by]: https://github.com/stdlib-js/stats-base-range-by/tree/umd
 
-[@stdlib/stats/strided/snanrange]: https://github.com/stdlib-js/stats-strided-snanrange
+[@stdlib/stats/strided/snanrange]: https://github.com/stdlib-js/stats-strided-snanrange/tree/umd
 
 <!-- </related-links> -->
 
