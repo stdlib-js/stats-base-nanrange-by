@@ -4,7 +4,29 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-10)
+## Unreleased (2025-07-05)
+
+<section class="features">
+
+### Features
+
+-   [`4f78b17`](https://github.com/stdlib-js/stdlib/commit/4f78b17cee147cfd13285ec9445d17239d4b94df) - refactor and add protocol support to `stats/base/nanrange-by` [(#6440)](https://github.com/stdlib-js/stdlib/pull/6440)
+
+</section>
+
+<!-- /.features -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#5666](https://github.com/stdlib-js/stdlib/issues/5666)
+
+</section>
+
+<!-- /.issues -->
 
 <section class="commits">
 
@@ -12,6 +34,7 @@
 
 <details>
 
+-   [`4f78b17`](https://github.com/stdlib-js/stdlib/commit/4f78b17cee147cfd13285ec9445d17239d4b94df) - **feat:** refactor and add protocol support to `stats/base/nanrange-by` [(#6440)](https://github.com/stdlib-js/stdlib/pull/6440) _(by Gautam Kaushik, Athan Reines, stdlib-bot, Gururaj Gurram)_
 -   [`22f79a3`](https://github.com/stdlib-js/stdlib/commit/22f79a34bf0ba067ceb9b016b8e1717b265fbb3f) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`e92388f`](https://github.com/stdlib-js/stdlib/commit/e92388f2e99794eed4be8908a2160e0ad9274321) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`36e1bc3`](https://github.com/stdlib-js/stdlib/commit/36e1bc38710d07b84bf38c11cedaec4748b7faeb) - **refactor:** update paths _(by Aayush Khanna)_
@@ -28,9 +51,11 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Aayush Khanna
+-   Athan Reines
+-   Gautam Kaushik
 -   Gururaj Gurram
 -   Philipp Burckhardt
 
